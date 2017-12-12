@@ -35,7 +35,7 @@ module Jekyll
         modules_dir = File.join(site.source, site.config['modules'])
       end
 
-      return unless page.data['modules']
+      return unless page && page.data && page.data['modules']
 
       html = ''
       page.data['modules'].each do |mod_name|
